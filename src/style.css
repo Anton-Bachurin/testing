@@ -1,5 +1,96 @@
-body {
-    background: #556B2F;
-    color: black;
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
 }
 
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.validator {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 40vh;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.icon {
+    width: 40px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: 1px solid green;
+    border-radius: 10%;
+    opacity: 0.3;
+}
+
+.iconActive {
+    opacity: 1;
+}
+
+.visa {
+    background-image: url("./images/Visa.png"); 
+}
+
+.mastercard {
+    background-image: url("./images/Mastercard.png");
+}
+
+.amExp {
+    background-image: url("./images/AmericanE.png");
+}
+
+.discover {
+    background-image: url("./images/DiscoverN.png");
+}
+
+.jcb {
+    background-image: url("./images/JCB.png");
+}
+
+.diners {
+    background-image: url("./images/Diners.png")
+}
+
+.mir {
+    background-image: url("./images/Mir.png")
+}
+
+.validator-input {
+    margin-top: 10px; 
+    align-self: flex-start;
+}
+
+.validate-cell {
+    width: 240px;
+    height: 28px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.validate-btn {
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #32CD32;
+    color: white;
+}
+
+.result {
+    padding-top: 10px;
+    color: green;
+    width: 100%;
+    height: 50px;
+}

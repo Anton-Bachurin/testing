@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Anton-Bachurin/DOM.git"
+    "url": "git+https://github.com/Anton-Bachurin/testing.git"
   },
   "author": "Anton Bachurin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Anton-Bachurin/DOM/issues"
+    "url": "https://github.com/Anton-Bachurin/testing/issues"
   },
-  "homepage": "https://github.com/Anton-Bachurin/DOM#readme",
+  "homepage": "https://github.com/Anton-Bachurin/testing#readme",
   "devDependencies": {
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.24.0",
@@ -30,6 +30,7 @@
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "mini-css-extract-plugin": "^2.8.1",
+    "puppeteer": "^22.6.2",
     "svg-inline-loader": "^0.8.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
