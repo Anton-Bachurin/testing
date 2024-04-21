@@ -19,19 +19,45 @@ const button = document.getElementById('validate-btn');
 
 if (input.length < 1) {
     result.innerHTML = 'Введите номер карты';
-};
-
-function isValid(num) {
-    const numReverse = num.split('').reverse();
-    for (let i = 0; i < numReverse.length; i++) {
-        if (numReverse[i] % 2 !== 1) {
-            numReverse[i] *= 2;
-        }
-    }
 }
 
+let valid = false;
+
+function isValid(num) {
+    let sum = 0; 
+    const numReverse = String(num).split('').reverse();
+    const numChanged = numReverse.map((el, idx) => 
+                                      (idx % 2 !== 0) 
+                                      ? +el * 2 
+                                      : +el);
+
+    const isDoubled = numChanged.map((el) => 
+                                  el > 9
+                                  ? el - 9
+                                  : el);
+
+    const numNum = isDoubled.reverse().join('').split('').map(Number);
+    
+    for(let i = 0; i < numNum.length; i++) {
+      sum +=numNum[i];
+    }
+
+    const sumString = String(sum);
+
+  if (sumString[sumString.length - 1] === '0') {
+    valid = true;
+  }   
+  return valid;
+}
+
+isValid(input);
+
 button.onclick = () => {
-    result.innerHTML = 'y645';  // это пока просто заглушка
+    if (valid) {
+        result.innerHTML = 'Карта действительна';
+    } else {
+        result.innerHTML = 'Неправильный номер карты';
+    }
     return false;
 };
 
