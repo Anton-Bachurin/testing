@@ -56,45 +56,45 @@ function isValid(num) {
 function chooseCard(num) {
     const numStr = String(num);
 
-    if (numStr[0] === '4' && numStr.length >= 13 && numStr.length <= 19) {  
+    if (numStr[0] === '4') {  
         visa.classList.add('iconActive');
         }
      else {
         visa.classList.remove('iconActive');
     } 
 
-    if (/^51|52|53|54|55|[222100-272099]/.test(num) && numStr.length === 16) {      
+    if (/^5[1-5]|^2{3}1\d{2}|^2[2-6][2-9]\d{3}|^270\d{3}|^271\d{3}|^2720\d{2}/.test(num)) {      
         mastercard.classList.add('iconActive');
     } else {
         mastercard.classList.remove('iconActive');
     } 
 
-    if (/^34|37/.test(num) && numStr.length === 15) {
+    if (/^3[47]/.test(num)) {
             amExp.classList.add('iconActive');        
         }
     else {
         amExp.classList.remove('iconActive');
     } 
 
-    if (/^6011|[622126-622925]|644|645|646|647|648|649|65/.test(num) && numStr.length >= 16 && numStr.length <=19) {  
+    if (/^6011|^65|^64[4-9]|^62212[6-9]|^6221[3-9]\d|^622[2-8]\d{2}|^6229[01]\d|^62292[0-5]/.test(num)) {
         discover.classList.add('iconActive');    
     } else {
         discover.classList.remove('iconActive');
     }
 
-    if (/^35[28-89]/.test(num) && numStr.length >= 16 && numStr.length <=19) {
+    if (/^352[89]|^35[3-8]\d/.test(num)) {
         jcb.classList.add('iconActive');
     } else {
         jcb.classList.remove('iconActive');
     }
 
-    if (/^[300-305]|36|54/.test(num) && (numStr.length === 14 || numStr.length === 16)) {
+    if (/^36|^54|^30[0-5]/.test(num)) {
         diners.classList.add('iconActive');
     } else {
         diners.classList.remove('iconActive');
     }
 
-    if (/^[2200-2204]/.test(num) && numStr.length >= 16 && numStr.length <= 19) {
+    if (/^220[0-4]/.test(num)) {
         mir.classList.add('iconActive');
     } else {
         mir.classList.remove('iconActive');
